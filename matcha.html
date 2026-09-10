@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Zen+Old+Mincho:wght@400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+@font-face { font-family: "Optima DS"; src: url("assets/Optima-Medium.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Optima DS"; src: url("assets/Optima-Bold.ttf") format("truetype"); font-weight: 700; }
+body { margin: 0; background: #F5F1E8; color: #1E1C19; }
+a { color: #1E1C19; text-decoration: none; } a:hover { color: #6B6557; }
+details > summary { list-style: none; cursor: pointer; } details > summary::-webkit-details-marker { display: none; }
+</style>
+</helmet>
+<div style="font-family: 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-weight: 300; color: #1E1C19; background: #F5F1E8; -webkit-font-smoothing: antialiased;">
+
+  <header style="position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; padding: 22px clamp(20px, 5vw, 64px); background: rgba(245,241,232,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid #E5E0D3;">
+    <a href="index.html" style="display: flex; align-items: center; gap: 14px;">
+      <svg width="30" height="30" viewBox="0 0 96 96"><circle cx="48" cy="48" r="10" fill="none" stroke="#1E1C19" stroke-width="2.5"></circle><circle cx="48" cy="48" r="38" fill="none" stroke="#1E1C19" stroke-width="2.5"></circle><circle cx="75" cy="21" r="7" fill="#1E1C19"></circle><circle cx="75" cy="21" r="13" fill="none" stroke="#1E1C19" stroke-width="2"></circle><circle cx="86" cy="14" r="3.5" fill="#F5F1E8" stroke="#1E1C19" stroke-width="2"></circle></svg>
+      <span style="font-family: 'Optima DS', 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-size: 13px; letter-spacing: 0.32em;">NATURAL MATCHA STANDARD</span>
+    </a>
+    <nav style="display: flex; gap: clamp(18px, 3vw, 40px); font-size: 12px; letter-spacing: 0.24em;">
+      <a href="#field">畑</a>
+      <a href="#process">工程</a>
+      <a href="#taste">味</a>
+      <a href="#lineup">ラインナップ</a>
+      <a href="#brew">点て方</a>
+      <a href="#shop" style="border-bottom: 1px solid #1E1C19; padding-bottom: 2px;">SHOP</a>
+    </nav>
+  </header>
+
+  <section id="top" data-screen-label="Hero" style="position: relative; min-height: 88vh; display: flex; align-items: flex-end; color: #F5F1E8;">
+    <div style="position: absolute; inset: 0;"><image-slot id="nm-hero" shape="rect" placeholder="ヒーロー写真：畑または茶碗の抹茶"></image-slot></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30,28,25,0.1) 30%, rgba(30,28,25,0.78) 100%); pointer-events: none;"></div>
+    <div style="position: relative; pointer-events: none; padding: 0 clamp(20px, 5vw, 64px) clamp(64px, 8vw, 120px); display: flex; flex-direction: column; gap: 26px; max-width: 1200px; width: 100%; margin: 0 auto; box-sizing: border-box;">
+      <div style="display: flex; align-items: center; gap: 16px; font-size: 11px; letter-spacing: 0.4em; color: #D8D2C4;">
+        <svg width="22" height="22" viewBox="0 0 96 96"><circle cx="48" cy="48" r="38" fill="none" stroke="#D8D2C4" stroke-width="2"></circle><circle cx="48" cy="48" r="10" fill="none" stroke="#D8D2C4" stroke-width="2.5"></circle></svg>
+        01 ─ 自然抹茶 · NATURAL MATCHA
+      </div>
+      <h1 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(30px, 4vw, 52px); line-height: 1.6; letter-spacing: 0.1em; margin: 0; text-wrap: pretty;">葉そのものの、<br>甘さが残る抹茶。</h1>
+      <p style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #D8D2C4; max-width: 38em; text-wrap: pretty;">Matcha grown without fertilizer or pesticides in Nara, ground slowly on a stone mill. The leaf's own sweetness remains.</p>
+    </div>
+  </section>
+
+  <section id="field" data-screen-label="Field" style="padding: clamp(96px, 12vw, 180px) clamp(20px, 5vw, 64px); max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(40px, 6vw, 96px); align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 28px;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #8A8474;">畑 · THE FIELD</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0; text-wrap: pretty;">肥料も、農薬も、入れない。</h2>
+        <p style="margin: 0; font-size: 14px; line-height: 2.1; color: #55503F; max-width: 32em; text-wrap: pretty;">奈良の山あいの畑では、肥料も農薬も使いません。落ち葉と草と、その土地にいる微生物だけが土を育てます。茶樹は自分の根で養分を探し、ゆっくりと育ちます。収量は一般の畑の三分の一ほど。その分、葉は薄く、雑味の少ない味になります。</p>
+        <p style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #55503F; max-width: 38em; text-wrap: pretty;">In the hills of Nara, nothing is added to the soil. Fallen leaves, grasses, and the life already in the ground do the work. The trees grow slowly, yielding about a third of a conventional field, and the leaves come out thin and clean.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 13px; letter-spacing: 0.1em; margin-top: 8px;">
+          <div><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; margin-bottom: 6px;">産地 / ORIGIN</div>奈良県 · Nara</div>
+          <div><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; margin-bottom: 6px;">栽培 / CULTIVATION</div>無肥料・無農薬</div>
+          <div><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; margin-bottom: 6px;">収穫 / HARVEST</div>年一回 · 一番茶</div>
+        </div>
+      </div>
+      <div style="aspect-ratio: 4 / 5; position: relative;"><image-slot id="nm-field" shape="rect" src="assets/field.jpg" placeholder="畑の写真"></image-slot></div>
+    </div>
+  </section>
+
+  <section id="process" data-screen-label="Process" style="background: #1E1C19; color: #F5F1E8; padding: clamp(96px, 12vw, 180px) clamp(20px, 5vw, 64px);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: clamp(56px, 7vw, 96px);">
+      <div style="display: flex; flex-direction: column; gap: 22px; max-width: 40em;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #B8B2A0;">工程 · FROM LEAF TO POWDER</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0; text-wrap: pretty;">碾茶から、石臼へ。</h2>
+        <p style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #B8B2A0; text-wrap: pretty;">Five steps, none of them hurried.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 40px 32px; border-top: 1px solid #3A372F; padding-top: 40px;">
+        <div style="display: flex; flex-direction: column; gap: 14px;"><div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474;">01</div><div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">被覆</div><p style="margin: 0; font-size: 13px; line-height: 1.9; color: #D8D2C4; text-wrap: pretty;">新芽の時期、畑に覆いをかけて光を和らげる。葉は薄く、緑が深くなる。</p><div style="font-size: 11px; line-height: 1.7; color: #8A8474;">Shading</div></div>
+        <div style="display: flex; flex-direction: column; gap: 14px;"><div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474;">02</div><div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">摘採</div><p style="margin: 0; font-size: 13px; line-height: 1.9; color: #D8D2C4; text-wrap: pretty;">年に一度、一番茶のみを摘む。</p><div style="font-size: 11px; line-height: 1.7; color: #8A8474;">Harvest</div></div>
+        <div style="display: flex; flex-direction: column; gap: 14px;"><div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474;">03</div><div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">蒸し</div><p style="margin: 0; font-size: 13px; line-height: 1.9; color: #D8D2C4; text-wrap: pretty;">摘んだその日に蒸して酵素を止め、色と香りを閉じ込める。</p><div style="font-size: 11px; line-height: 1.7; color: #8A8474;">Steaming</div></div>
+        <div style="display: flex; flex-direction: column; gap: 14px;"><div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474;">04</div><div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">碾茶</div><p style="margin: 0; font-size: 13px; line-height: 1.9; color: #D8D2C4; text-wrap: pretty;">揉まずに乾かし、茎と葉脈を取り除く。残るのは葉肉だけ。</p><div style="font-size: 11px; line-height: 1.7; color: #8A8474;">Tencha</div></div>
+        <div style="display: flex; flex-direction: column; gap: 14px;"><div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474;">05</div><div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">石臼</div><p style="margin: 0; font-size: 13px; line-height: 1.9; color: #D8D2C4; text-wrap: pretty;">一時間に約40g。熱を持たせないよう、ゆっくり挽く。</p><div style="font-size: 11px; line-height: 1.7; color: #8A8474;">Stone mill</div></div>
+      </div>
+      <div style="aspect-ratio: 21 / 9; position: relative;"><image-slot id="nm-process" shape="rect" placeholder="石臼または碾茶の写真"></image-slot></div>
+    </div>
+  </section>
+
+  <section id="taste" data-screen-label="Taste" style="padding: clamp(96px, 12vw, 180px) clamp(20px, 5vw, 64px); max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(40px, 6vw, 96px); align-items: center;">
+      <div style="aspect-ratio: 1; position: relative; order: 0;"><image-slot id="nm-taste" shape="rect" placeholder="点てた抹茶の写真"></image-slot></div>
+      <div style="display: flex; flex-direction: column; gap: 28px;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #8A8474;">味 · THE TASTE</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0; text-wrap: pretty;">色は淡く、香りは静か。</h2>
+        <p style="margin: 0; font-size: 14px; line-height: 2.1; color: #55503F; max-width: 32em; text-wrap: pretty;">肥料で作られる濃い緑や強い旨みはありません。渋みは軽く、そのあとに葉そのものの甘さがゆっくり広がります。薄茶でも、濃茶でも、水でも。飲み終えたあとに何も残らない、澄んだ余韻です。</p>
+        <p style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #55503F; max-width: 38em; text-wrap: pretty;">No fertilizer means no forced umami and no deep, artificial green. A light astringency, then the leaf's own sweetness. Clean to the last sip.</p>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 8px; border-top: 1px solid #E5E0D3; padding-top: 24px;">
+          <div><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; margin-bottom: 8px;">色 / COLOR</div><div style="font-size: 13px; letter-spacing: 0.06em;">淡い若草</div></div>
+          <div><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; margin-bottom: 8px;">香 / AROMA</div><div style="font-size: 13px; letter-spacing: 0.06em;">青葉、干し草</div></div>
+          <div><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; margin-bottom: 8px;">余韻 / FINISH</div><div style="font-size: 13px; letter-spacing: 0.06em;">澄んだ甘さ</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lineup" data-screen-label="Lineup" style="background: #EDE8DC; padding: clamp(96px, 12vw, 180px) clamp(20px, 5vw, 64px);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: clamp(48px, 6vw, 80px);">
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #8A8474;">ラインナップ · THE LINEUP</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0; text-wrap: pretty;">三つの抹茶。畑は、ひとつ。</h2>
+        <p style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #55503F; max-width: 38em; text-wrap: pretty;">Three grades from one field, sorted by the age of the leaf and the fineness of the grind.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+        <div style="background: #F5F1E8; display: flex; flex-direction: column;">
+          <div style="aspect-ratio: 1; position: relative;"><image-slot id="nm-p-daily" shape="rect" placeholder="DAILY 缶の写真"></image-slot></div>
+          <div style="padding: 32px 28px 36px; display: flex; flex-direction: column; gap: 16px; flex: 1;">
+            <div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474;">01</div>
+            <div style="font-family: 'Optima DS', 'Manrope', sans-serif; font-size: 15px; letter-spacing: 0.24em; line-height: 1.6;">NATURAL MATCHA<br>DAILY</div>
+            <div style="font-family: 'Zen Old Mincho', serif; font-size: 15px; letter-spacing: 0.14em;">日々の一碗に</div>
+            <p style="margin: 0; font-size: 13px; line-height: 1.9; color: #55503F; text-wrap: pretty; flex: 1;">二番葉も含めて挽いた、朝の一杯や抹茶ラテのための抹茶。渋みがあり、ミルクにも負けない。</p>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid #E5E0D3; padding-top: 16px; font-size: 13px; letter-spacing: 0.1em;"><span>20g · 缶</span><span style="font-family: 'Manrope', sans-serif; font-weight: 400;">¥ —,———</span></div>
+            <a href="#shop" style="font-size: 12px; letter-spacing: 0.3em; border-bottom: 1px solid #1E1C19; padding-bottom: 4px; align-self: flex-start;">購入する　<span style="color: #55503F;">BUY</span></a>
+          </div>
+        </div>
+        <div style="background: #F5F1E8; display: flex; flex-direction: column;">
+          <div style="aspect-ratio: 1; position: relative;"><image-slot id="nm-p-ceremonial" shape="rect" placeholder="CEREMONIAL 缶の写真"></image-slot></div>
+          <div style="padding: 32px 28px 36px; display: flex; flex-direction: column; gap: 16px; flex: 1;">
+            <div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474;">02</div>
+            <div style="font-family: 'Optima DS', 'Manrope', sans-serif; font-size: 15px; letter-spacing: 0.24em; line-height: 1.6;">NATURAL MATCHA<br>CEREMONIAL</div>
+            <div style="font-family: 'Zen Old Mincho', serif; font-size: 15px; letter-spacing: 0.14em;">薄茶・濃茶に</div>
+            <p style="margin: 0; font-size: 13px; line-height: 1.9; color: #55503F; text-wrap: pretty; flex: 1;">一番茶の若い葉だけを、石臼で細かく挽いた。茶碗で点てるための、この畑の標準。</p>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid #E5E0D3; padding-top: 16px; font-size: 13px; letter-spacing: 0.1em;"><span>20g · 缶</span><span style="font-family: 'Manrope', sans-serif; font-weight: 400;">¥ —,———</span></div>
+            <a href="#shop" style="font-size: 12px; letter-spacing: 0.3em; border-bottom: 1px solid #1E1C19; padding-bottom: 4px; align-self: flex-start;">購入する　<span style="color: #55503F;">BUY</span></a>
+          </div>
+        </div>
+        <div style="background: #1E1C19; color: #F5F1E8; display: flex; flex-direction: column;">
+          <div style="aspect-ratio: 1; position: relative;"><image-slot id="nm-p-reserve" shape="rect" placeholder="RESERVE 缶の写真"></image-slot></div>
+          <div style="padding: 32px 28px 36px; display: flex; flex-direction: column; gap: 16px; flex: 1;">
+            <div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474;">03</div>
+            <div style="font-family: 'Optima DS', 'Manrope', sans-serif; font-size: 15px; letter-spacing: 0.24em; line-height: 1.6;">NATURAL MATCHA<br>RESERVE</div>
+            <div style="font-family: 'Zen Old Mincho', serif; font-size: 15px; letter-spacing: 0.14em;">その年、最初の芽</div>
+            <p style="margin: 0; font-size: 13px; line-height: 1.9; color: #D8D2C4; text-wrap: pretty; flex: 1;">摘み始めの数日分だけ。数量限定、年一回の頒布。</p>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid #3A372F; padding-top: 16px; font-size: 13px; letter-spacing: 0.1em;"><span>20g · 缶</span><span style="font-family: 'Manrope', sans-serif; font-weight: 400;">¥ —,———</span></div>
+            <a href="#shop" style="font-size: 12px; letter-spacing: 0.3em; border-bottom: 1px solid #F5F1E8; padding-bottom: 4px; align-self: flex-start; color: #F5F1E8;">購入する　<span style="color: #B8B2A0;">BUY</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="subscription" style="background: #F5F1E8; padding: clamp(40px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <div style="font-size: 11px; letter-spacing: 0.4em; color: #8A8474;">定期便 · SUBSCRIPTION</div>
+          <h3 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(20px, 2vw, 26px); line-height: 1.7; letter-spacing: 0.08em; margin: 0;">月に一缶、挽きたてを。</h3>
+          <p style="margin: 0; font-size: 13px; line-height: 1.9; color: #55503F; max-width: 36em; text-wrap: pretty;">抹茶は挽いてから香りが落ちていきます。定期便は毎月、発送直前に挽いたものだけをお届けします。DAILY または CEREMONIAL から選べ、いつでも休止できます。</p>
+          <p style="margin: 0; font-size: 12px; line-height: 1.8; letter-spacing: 0.04em; color: #8A8474; max-width: 40em;">Freshly ground before each shipment. Daily or Ceremonial, monthly, pause anytime.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-start;">
+          <div style="font-size: 13px; letter-spacing: 0.1em;">毎月 · 20g × 1缶　<span style="color: #8A8474;">送料込 · 定価より 10% off</span></div>
+          <a href="#shop" style="display: inline-flex; align-items: center; margin-top: 4px; font-size: 12px; letter-spacing: 0.3em; border: 1px solid #1E1C19; padding: 16px 28px;" style-hover="background: #1E1C19; color: #F5F1E8;">定期便をはじめる</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="brew" data-screen-label="Brew" style="padding: clamp(96px, 12vw, 180px) clamp(20px, 5vw, 64px); max-width: 1200px; margin: 0 auto;">
+    <div style="display: flex; flex-direction: column; gap: clamp(48px, 6vw, 72px);">
+      <div style="display: flex; flex-direction: column; gap: 22px; max-width: 40em;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #8A8474;">点て方 · HOW TO PREPARE</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0; text-wrap: pretty;">道具は、あるもので。</h2>
+        <p style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #55503F; text-wrap: pretty;">A bowl, a whisk if you have one, water a little off the boil. That is enough.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px 32px;">
+        <div style="display: flex; flex-direction: column; gap: 14px;"><div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474;">01</div><div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">ふるう</div><p style="margin: 0; font-size: 13px; line-height: 1.9; color: #55503F; text-wrap: pretty;">抹茶 2g（茶杓1杯半）を茶碗にふるい入れる。</p><div style="font-size: 11px; line-height: 1.7; color: #8A8474;">Sift 2g into the bowl</div></div>
+        <div style="display: flex; flex-direction: column; gap: 14px;"><div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474;">02</div><div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">湯</div><p style="margin: 0; font-size: 13px; line-height: 1.9; color: #55503F; text-wrap: pretty;">80℃ほどの湯を 70ml。沸かした湯を一度、別の器に移すとちょうどよい。</p><div style="font-size: 11px; line-height: 1.7; color: #8A8474;">70ml water at about 80°C</div></div>
+        <div style="display: flex; flex-direction: column; gap: 14px;"><div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474;">03</div><div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">点てる</div><p style="margin: 0; font-size: 13px; line-height: 1.9; color: #55503F; text-wrap: pretty;">手首でMの字を描くように、15秒ほど。泡は立てすぎなくてよい。</p><div style="font-size: 11px; line-height: 1.7; color: #8A8474;">Whisk in an M motion, ~15 seconds</div></div>
+        <div style="display: flex; flex-direction: column; gap: 14px;"><div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474;">04</div><div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">飲む</div><p style="margin: 0; font-size: 13px; line-height: 1.9; color: #55503F; text-wrap: pretty;">すぐに。熱いうちに、ゆっくり。</p><div style="font-size: 11px; line-height: 1.7; color: #8A8474;">Drink right away</div></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; border-top: 1px solid #E5E0D3; padding-top: 32px; font-size: 13px; line-height: 1.9; color: #55503F;">
+        <div><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; margin-bottom: 8px;">水で / COLD</div>抹茶 2g に冷水 150ml。ボトルで振るだけで、甘さがいちばん素直に出ます。</div>
+        <div><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; margin-bottom: 8px;">ラテ / LATTE</div>DAILY 3g を湯 30ml で溶き、温めたミルク 150ml を注ぐ。</div>
+        <div><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; margin-bottom: 8px;">保存 / STORAGE</div>開封後は冷蔵庫で、一ヶ月以内に。光と湿気を避けて。</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="voice" data-screen-label="Voice" style="position: relative; padding: clamp(120px, 14vw, 220px) clamp(20px, 5vw, 64px); color: #F5F1E8; text-align: center; overflow: hidden;">
+    <div style="position: absolute; inset: 0;"><image-slot id="nm-voice" shape="rect" placeholder="茶農家・畑の写真（背景）"></image-slot></div>
+    <div style="position: absolute; inset: 0; background: rgba(30,28,25,0.72); pointer-events: none;"></div>
+    <div style="position: relative; pointer-events: none; display: flex; flex-direction: column; align-items: center; gap: 32px; max-width: 760px; margin: 0 auto;">
+      <div style="font-size: 11px; letter-spacing: 0.4em; color: #D8D2C4;">茶農家の言葉 · FROM THE GROWER</div>
+      <p style="margin: 0; font-family: 'Zen Old Mincho', serif; font-size: clamp(18px, 2vw, 26px); line-height: 2.2; letter-spacing: 0.1em; text-wrap: pretty;">肥料をやめたとき、畑は一度、ひどく痩せました。<br>それでも三年目に出てきた芽は、これまで見たことのない色をしていた。<br>私たちは、ただその葉を挽いているだけです。</p>
+      <p style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #D8D2C4; max-width: 40em; text-wrap: pretty;">When we stopped fertilizing, the field grew thin for a while. In the third year the new shoots came up a color we had never seen. All we do is grind that leaf.</p>
+      <div style="font-size: 11px; letter-spacing: 0.3em; color: #B8B2A0; margin-top: 8px;">悠三堂 · YUSANDO, NARA</div>
+    </div>
+  </section>
+
+  <section id="faq" data-screen-label="FAQ" style="padding: clamp(96px, 12vw, 180px) clamp(20px, 5vw, 64px); max-width: 880px; margin: 0 auto;">
+    <div style="display: flex; flex-direction: column; gap: 48px;">
+      <div style="display: flex; flex-direction: column; gap: 22px;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #8A8474;">よくある質問 · FAQ</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0;">はじめての方へ</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; border-top: 1px solid #E5E0D3;">
+        <details style="border-bottom: 1px solid #E5E0D3;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font-size: 15px; letter-spacing: 0.06em;">色が薄いのは、品質が低いからですか。<span style="font-size: 18px; color: #8A8474; font-weight: 300;">+</span></summary><div style="padding: 0 0 28px; font-size: 13px; line-height: 1.9; color: #55503F; max-width: 40em; text-wrap: pretty;">いいえ。濃い緑は窒素肥料によるものです。無肥料の抹茶は淡い若草色になります。<br><span style="color: #8A8474;">No. Deep green comes from nitrogen fertilizer. Unfertilized matcha is naturally paler.</span></div></details>
+        <details style="border-bottom: 1px solid #E5E0D3;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font-size: 15px; letter-spacing: 0.06em;">有機JASとの違いは何ですか。<span style="font-size: 18px; color: #8A8474; font-weight: 300;">+</span></summary><div style="padding: 0 0 28px; font-size: 13px; line-height: 1.9; color: #55503F; max-width: 40em; text-wrap: pretty;">有機栽培は有機肥料を使います。自然栽培は肥料そのものを使いません。土と草と樹の力だけで育てます。<br><span style="color: #8A8474;">Organic farming uses organic fertilizer. Natural cultivation uses none at all.</span></div></details>
+        <details style="border-bottom: 1px solid #E5E0D3;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font-size: 15px; letter-spacing: 0.06em;">DAILY と CEREMONIAL、どちらを選べばよいですか。<span style="font-size: 18px; color: #8A8474; font-weight: 300;">+</span></summary><div style="padding: 0 0 28px; font-size: 13px; line-height: 1.9; color: #55503F; max-width: 40em; text-wrap: pretty;">茶碗で点てて飲むなら CEREMONIAL。ラテや料理に使うなら DAILY。迷ったら CEREMONIAL から。<br><span style="color: #8A8474;">Whisked in a bowl: Ceremonial. Lattes and cooking: Daily. If unsure, start with Ceremonial.</span></div></details>
+        <details style="border-bottom: 1px solid #E5E0D3;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font-size: 15px; letter-spacing: 0.06em;">賞味期限と保存方法は。<span style="font-size: 18px; color: #8A8474; font-weight: 300;">+</span></summary><div style="padding: 0 0 28px; font-size: 13px; line-height: 1.9; color: #55503F; max-width: 40em; text-wrap: pretty;">未開封で製造から6ヶ月。開封後は冷蔵庫で保存し、1ヶ月以内にお飲みください。<br><span style="color: #8A8474;">Six months unopened. Refrigerate after opening and finish within a month.</span></div></details>
+        <details style="border-bottom: 1px solid #E5E0D3;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font-size: 15px; letter-spacing: 0.06em;">海外発送はできますか。<span style="font-size: 18px; color: #8A8474; font-weight: 300;">+</span></summary><div style="padding: 0 0 28px; font-size: 13px; line-height: 1.9; color: #55503F; max-width: 40em; text-wrap: pretty;">はい。オンラインショップから各国へ発送しています。<br><span style="color: #8A8474;">Yes, we ship internationally from the online shop.</span></div></details>
+      </div>
+    </div>
+  </section>
+
+  <footer id="shop" data-screen-label="Footer" style="background: #1E1C19; color: #F5F1E8; padding: clamp(64px, 8vw, 120px) clamp(20px, 5vw, 64px) 40px;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 48px;">
+      <div style="display: flex; align-items: center; gap: 18px;">
+        <svg width="44" height="44" viewBox="0 0 96 96"><circle cx="48" cy="48" r="10" fill="none" stroke="#F5F1E8" stroke-width="2"></circle><circle cx="48" cy="48" r="38" fill="none" stroke="#F5F1E8" stroke-width="2"></circle><circle cx="75" cy="21" r="7" fill="#F5F1E8"></circle><circle cx="75" cy="21" r="13" fill="none" stroke="#F5F1E8" stroke-width="1.6"></circle><circle cx="86" cy="14" r="3.5" fill="#1E1C19" stroke="#F5F1E8" stroke-width="1.6"></circle></svg>
+        <div style="font-family: 'Optima DS', 'Manrope', 'Zen Kaku Gothic New', sans-serif;">
+          <div style="font-size: 13px; letter-spacing: 0.32em;">NATURAL MATCHA STANDARD</div>
+          <div style="font-size: 9px; letter-spacing: 0.5em; margin-top: 6px; color: #B8B2A0;">BY YUSANDO</div>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: clamp(32px, 5vw, 80px); font-size: 12px; letter-spacing: 0.24em; line-height: 2.6;">
+        <div style="display: flex; flex-direction: column;"><a href="#shop" style="color: #F5F1E8;">ONLINE SHOP</a><a href="#lineup" style="color: #F5F1E8;">自然抹茶</a><a href="sado.html" style="color: #F5F1E8;">自然茶道</a><a href="chaji.html" style="color: #F5F1E8;">自然茶事</a></div>
+        <div style="display: flex; flex-direction: column;"><a href="index.html#farm" style="color: #F5F1E8;">YUSANDO</a><a href="index.html#farm" style="color: #F5F1E8;">TEA TOUR</a><a href="index.html#farm" style="color: #F5F1E8;">CONTACT</a></div>
+      </div>
+    </div>
+    <div style="max-width: 1200px; margin: 64px auto 0; padding-top: 24px; border-top: 1px solid #3A372F; font-size: 11px; letter-spacing: 0.2em; color: #8A8474; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;"><span>© 株式会社悠三堂 · YUSANDO Co., Ltd. — Nara, Japan</span><span>日本語 / ENGLISH</span></div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>

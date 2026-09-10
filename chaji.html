@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Zen+Old+Mincho:wght@400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+@font-face { font-family: "Optima DS"; src: url("assets/Optima-Medium.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Optima DS"; src: url("assets/Optima-Bold.ttf") format("truetype"); font-weight: 700; }
+body { margin: 0; background: #F5F1E8; color: #1E1C19; }
+a { color: #1E1C19; text-decoration: none; } a:hover { color: #6B6557; }
+details > summary { list-style: none; cursor: pointer; } details > summary::-webkit-details-marker { display: none; }
+</style>
+</helmet>
+<div style="font-family: 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-weight: 300; color: #1E1C19; background: #F5F1E8; -webkit-font-smoothing: antialiased;">
+
+  <header style="position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; padding: 22px clamp(20px, 5vw, 64px); background: rgba(245,241,232,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid #E5E0D3;">
+    <a href="index.html" style="display: flex; align-items: center; gap: 14px;">
+      <svg width="30" height="30" viewBox="0 0 96 96"><circle cx="48" cy="48" r="10" fill="none" stroke="#1E1C19" stroke-width="2.5"></circle><circle cx="48" cy="48" r="38" fill="none" stroke="#1E1C19" stroke-width="2.5"></circle><circle cx="75" cy="21" r="7" fill="#1E1C19"></circle><circle cx="75" cy="21" r="13" fill="none" stroke="#1E1C19" stroke-width="2"></circle><circle cx="86" cy="14" r="3.5" fill="#F5F1E8" stroke="#1E1C19" stroke-width="2"></circle></svg>
+      <span style="font-family: 'Optima DS', 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-size: 13px; letter-spacing: 0.32em;">NATURAL MATCHA STANDARD</span>
+    </a>
+    <nav style="display: flex; gap: clamp(18px, 3vw, 40px); font-size: 12px; letter-spacing: 0.24em;">
+      <a href="#philosophy">思想</a>
+      <a href="#kaiseki">懐石</a>
+      <a href="#flow">半日の流れ</a>
+      <a href="#calendar">年間</a>
+      <a href="#visit">ご案内</a>
+      <a href="#reserve" style="border-bottom: 1px solid #1E1C19; padding-bottom: 2px;">予約</a>
+    </nav>
+  </header>
+
+  <section id="top" data-screen-label="Hero" style="position: relative; min-height: 88vh; display: flex; align-items: flex-end; color: #F5F1E8;">
+    <div style="position: absolute; inset: 0;"><image-slot id="nc-hero" shape="rect" placeholder="ヒーロー写真：懐石の膳、または炉の火"></image-slot></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30,28,25,0.1) 30%, rgba(30,28,25,0.78) 100%); pointer-events: none;"></div>
+    <div style="position: relative; pointer-events: none; padding: 0 clamp(20px, 5vw, 64px) clamp(64px, 8vw, 120px); display: flex; flex-direction: column; gap: 26px; max-width: 1200px; width: 100%; margin: 0 auto; box-sizing: border-box;">
+      <div style="display: flex; align-items: center; gap: 16px; font-size: 11px; letter-spacing: 0.4em; color: #D8D2C4;">
+        <svg width="22" height="22" viewBox="0 0 96 96"><circle cx="48" cy="48" r="38" fill="none" stroke="#D8D2C4" stroke-width="2"></circle><circle cx="48" cy="48" r="10" fill="none" stroke="#D8D2C4" stroke-width="2"></circle></svg>
+        03 ─ 自然茶事 · NATURAL CHAJI
+      </div>
+      <h1 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(30px, 4vw, 52px); line-height: 1.6; letter-spacing: 0.1em; margin: 0; text-wrap: pretty;">半日を、<br>畑の恵みだけで。</h1>
+      <p style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #D8D2C4; max-width: 38em; text-wrap: pretty;">A full tea gathering: a meal, sweets, thick tea and thin tea, every element grown on this land. Half a day, one party, no repeat.</p>
+    </div>
+  </section>
+
+  <section id="philosophy" data-screen-label="Philosophy" style="padding: clamp(96px, 12vw, 180px) clamp(20px, 5vw, 64px); max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(40px, 6vw, 96px); align-items: center;">
+      <div style="aspect-ratio: 4 / 5; position: relative;"><image-slot id="nc-philosophy" shape="rect" placeholder="炉と釜、または露地の写真"></image-slot></div>
+      <div style="display: flex; flex-direction: column; gap: 28px;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #8A8474;">思想 · THE WHOLE FIELD ON ONE TRAY</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0; text-wrap: pretty;">米も、味噌も、茶も。<br>一つの土から。</h2>
+        <p style="margin: 0; font-size: 14px; line-height: 2.1; color: #55503F; max-width: 32em; text-wrap: pretty;">自然茶事は、茶の湯の正式なかたちに、農家の一年をそのまま載せたものです。懐石の米と野菜、味噌と菓子、そして濃茶と薄茶。膳に上がるものはすべて、肥料も農薬も使わずにこの土地で育てました。買ってきたものは、塩と水だけです。</p>
+        <p style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #55503F; max-width: 38em; text-wrap: pretty;">Natural Chaji places a farmer's whole year onto the formal structure of a tea gathering. Rice and vegetables for the meal, miso, sweets, thick and thin tea: everything on the tray was grown here without fertiliser or pesticide. The only things we buy are salt and water.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 13px; letter-spacing: 0.1em; margin-top: 8px;">
+          <div><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; margin-bottom: 6px;">所要 / DURATION</div>約 4 時間</div>
+          <div><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; margin-bottom: 6px;">人数 / GUESTS</div>一会 3〜5名</div>
+          <div><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; margin-bottom: 6px;">開催 / FREQUENCY</div>月 2 会まで</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kaiseki" data-screen-label="Kaiseki" style="background: #1E1C19; color: #F5F1E8; padding: clamp(96px, 12vw, 180px) clamp(20px, 5vw, 64px);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: clamp(56px, 7vw, 96px);">
+      <div style="display: flex; flex-direction: column; gap: 22px; max-width: 40em;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #B8B2A0;">懐石 · THE MEAL</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0; text-wrap: pretty;">一汁三菜。その年に採れたもので。</h2>
+        <p style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #B8B2A0; text-wrap: pretty;">One soup, three dishes, in the classic order. The menu is decided by the field the week before.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <div style="aspect-ratio: 1; position: relative;"><image-slot id="nc-rice" shape="rect" placeholder="飯・汁の写真"></image-slot></div>
+          <div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474;">01 · 飯 · 汁</div>
+          <div style="font-family: 'Zen Old Mincho', serif; font-size: 19px; letter-spacing: 0.12em;">自然栽培の米と味噌</div>
+          <p style="margin: 0; font-size: 13px; line-height: 1.9; color: #D8D2C4; text-wrap: pretty;">畑の隣の田で育てた米。味噌は畑の大豆で、二年寝かせたもの。</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <div style="aspect-ratio: 1; position: relative;"><image-slot id="nc-mukozuke" shape="rect" placeholder="向付・煮物椀の写真"></image-slot></div>
+          <div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474;">02 · 向付 · 煮物椀</div>
+          <div style="font-family: 'Zen Old Mincho', serif; font-size: 19px; letter-spacing: 0.12em;">その週の野菜</div>
+          <p style="margin: 0; font-size: 13px; line-height: 1.9; color: #D8D2C4; text-wrap: pretty;">魚は使いません。畑の野菜と裏山の山菜、乾物で、季節の一椀を。</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <div style="aspect-ratio: 1; position: relative;"><image-slot id="nc-hassun" shape="rect" placeholder="八寸の写真"></image-slot></div>
+          <div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474;">03 · 八寸</div>
+          <div style="font-family: 'Zen Old Mincho', serif; font-size: 19px; letter-spacing: 0.12em;">山のもの、畑のもの</div>
+          <p style="margin: 0; font-size: 13px; line-height: 1.9; color: #D8D2C4; text-wrap: pretty;">杉の板に二種。亭主が酌をし、客と杯を交わします。酒は自社の「和以為尊」。</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <div style="aspect-ratio: 1; position: relative;"><image-slot id="nc-omogashi" shape="rect" placeholder="主菓子の写真"></image-slot></div>
+          <div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474;">04 · 主菓子</div>
+          <div style="font-family: 'Zen Old Mincho', serif; font-size: 19px; letter-spacing: 0.12em;">濃茶のための菓子</div>
+          <p style="margin: 0; font-size: 13px; line-height: 1.9; color: #D8D2C4; text-wrap: pretty;">畑の小豆で炊いた餡を、その日の朝に。濃茶の苦みに寄り添う甘さに。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="flow" data-screen-label="Flow" style="padding: clamp(96px, 12vw, 180px) clamp(20px, 5vw, 64px); max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(40px, 6vw, 96px); align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 22px; position: sticky; top: 120px;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #8A8474;">半日の流れ · THE HALF DAY</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0; text-wrap: pretty;">火を入れ、食べ、<br>一服して、また一服。</h2>
+        <p style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #55503F; text-wrap: pretty;">The classical sequence, kept whole. About four hours from the gate to the last bowl.</p>
+        <div style="aspect-ratio: 4 / 3; position: relative; margin-top: 16px;"><image-slot id="nc-flow" shape="rect" placeholder="濃茶を練る手元の写真"></image-slot></div>
+      </div>
+      <div style="display: flex; flex-direction: column; border-top: 1px solid #E5E0D3;">
+        <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 28px 0; border-bottom: 1px solid #E5E0D3;"><div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474; padding-top: 4px;">01</div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">待合 · 露地</div><p style="margin: 0; font-size: 13px; line-height: 1.9; color: #55503F; text-wrap: pretty;">畑の見える待合で白湯を一杯。露地を通り、手を清めて席入り。</p><div style="font-size: 11px; color: #8A8474;">Waiting room and garden path</div></div></div>
+        <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 28px 0; border-bottom: 1px solid #E5E0D3;"><div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474; padding-top: 4px;">02</div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">初炭</div><p style="margin: 0; font-size: 13px; line-height: 1.9; color: #55503F; text-wrap: pretty;">裏山の炭で炉に火を入れます。釜が鳴るまでの時間も、席の一部です。</p><div style="font-size: 11px; color: #8A8474;">Laying the charcoal</div></div></div>
+        <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 28px 0; border-bottom: 1px solid #E5E0D3;"><div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474; padding-top: 4px;">03</div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">懐石</div><p style="margin: 0; font-size: 13px; line-height: 1.9; color: #55503F; text-wrap: pretty;">飯、汁、向付から八寸、湯桶まで。一時間ほどかけて、畑の一年を食べます。</p><div style="font-size: 11px; color: #8A8474;">The meal</div></div></div>
+        <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 28px 0; border-bottom: 1px solid #E5E0D3;"><div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474; padding-top: 4px;">04</div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">主菓子 · 中立</div><p style="margin: 0; font-size: 13px; line-height: 1.9; color: #55503F; text-wrap: pretty;">菓子をいただき、いったん席を出て露地で休みます。亭主は床を花に替えます。</p><div style="font-size: 11px; color: #8A8474;">Sweet, then a pause in the garden</div></div></div>
+        <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 28px 0; border-bottom: 1px solid #E5E0D3;"><div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474; padding-top: 4px;">05</div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">濃茶</div><p style="margin: 0; font-size: 13px; line-height: 1.9; color: #55503F; text-wrap: pretty;">一碗を客全員で回し飲みます。この日のための自然栽培抹茶、RESERVEを使います。</p><div style="font-size: 11px; color: #8A8474;">Thick tea, one bowl shared</div></div></div>
+        <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 28px 0; border-bottom: 1px solid #E5E0D3;"><div style="font-size: 11px; letter-spacing: 0.3em; color: #8A8474; padding-top: 4px;">06</div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">後炭 · 薄茶</div><p style="margin: 0; font-size: 13px; line-height: 1.9; color: #55503F; text-wrap: pretty;">火を直し、干菓子とともに薄茶を一人一碗。ここからは肩の力を抜いて。</p><div style="font-size: 11px; color: #8A8474;">Thin tea, one bowl each</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calendar" data-screen-label="Calendar" style="background: #EDE8DC; padding: clamp(96px, 12vw, 180px) clamp(20px, 5vw, 64px);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: clamp(48px, 6vw, 80px);">
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #8A8474;">年間 · THE YEAR OF GATHERINGS</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0; text-wrap: pretty;">農家の暦で、茶事を組む。</h2>
+        <p style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #55503F; max-width: 38em; text-wrap: pretty;">Four gatherings a year follow the farm, not the tea calendar.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;">
+        <div style="background: #F5F1E8; padding: 32px 28px; display: flex; flex-direction: column; gap: 18px;">
+          <div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474;">五月 / MAY</div>
+          <div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">新茶の茶事</div>
+          <p style="margin: 0; font-size: 13px; line-height: 1.8; color: #55503F; border-top: 1px solid #E5E0D3; padding-top: 16px; text-wrap: pretty;">摘みたての一番茶を、その年はじめて挽く。菓子は蓬と筍。</p>
+        </div>
+        <div style="background: #F5F1E8; padding: 32px 28px; display: flex; flex-direction: column; gap: 18px;">
+          <div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474;">八月 / AUGUST</div>
+          <div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">朝茶事</div>
+          <p style="margin: 0; font-size: 13px; line-height: 1.8; color: #55503F; border-top: 1px solid #E5E0D3; padding-top: 16px; text-wrap: pretty;">朝六時、涼しいうちに。夏野菜の懐石と葛の菓子。</p>
+        </div>
+        <div style="background: #F5F1E8; padding: 32px 28px; display: flex; flex-direction: column; gap: 18px;">
+          <div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474;">十一月 / NOVEMBER</div>
+          <div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">口切の茶事</div>
+          <p style="margin: 0; font-size: 13px; line-height: 1.8; color: #55503F; border-top: 1px solid #E5E0D3; padding-top: 16px; text-wrap: pretty;">春に詰めた茶壺を開く、茶の正月。新米と栗の懐石。</p>
+        </div>
+        <div style="background: #F5F1E8; padding: 32px 28px; display: flex; flex-direction: column; gap: 18px;">
+          <div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474;">二月 / FEBRUARY</div>
+          <div style="font-family: 'Zen Old Mincho', serif; font-size: 18px; letter-spacing: 0.12em;">夜咄の茶事</div>
+          <p style="margin: 0; font-size: 13px; line-height: 1.8; color: #55503F; border-top: 1px solid #E5E0D3; padding-top: 16px; text-wrap: pretty;">日暮れから、蝋燭の灯りで。根菜と干し柿、一年で最も静かな席。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="voice" data-screen-label="Voice" style="position: relative; padding: clamp(120px, 14vw, 220px) clamp(20px, 5vw, 64px); color: #F5F1E8; text-align: center; overflow: hidden;">
+    <div style="position: absolute; inset: 0;"><image-slot id="nc-voice" shape="rect" placeholder="夜の茶室、または田の写真（背景）"></image-slot></div>
+    <div style="position: absolute; inset: 0; background: rgba(30,28,25,0.72); pointer-events: none;"></div>
+    <div style="position: relative; pointer-events: none; display: flex; flex-direction: column; align-items: center; gap: 32px; max-width: 760px; margin: 0 auto;">
+      <div style="font-size: 11px; letter-spacing: 0.4em; color: #D8D2C4;">亭主の言葉 · FROM THE HOST</div>
+      <p style="margin: 0; font-family: 'Zen Old Mincho', serif; font-size: clamp(18px, 2vw, 26px); line-height: 2.2; letter-spacing: 0.1em; text-wrap: pretty;">茶事の準備は、一年前の種まきから始まる。<br>膳に上がるものは、すべてその答えです。</p>
+      <p style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #D8D2C4; max-width: 40em; text-wrap: pretty;">Preparing a chaji begins with sowing, a year before. Everything on the tray is the answer to that.</p>
+      <div style="font-size: 11px; letter-spacing: 0.3em; color: #B8B2A0; margin-top: 8px;">悠三堂 · YUSANDO, NARA</div>
+    </div>
+  </section>
+
+  <section id="visit" data-screen-label="Visit" style="padding: clamp(96px, 12vw, 180px) clamp(20px, 5vw, 64px); max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(40px, 6vw, 96px); align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 28px;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #8A8474;">ご案内 · VISIT</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0; text-wrap: pretty;">一会、一組だけ。</h2>
+        <p style="margin: 0; font-size: 14px; line-height: 2.1; color: #55503F; max-width: 32em; text-wrap: pretty;">月に二会まで、一組ずつお受けしています。正客を決めてお申し込みください。初めての方には事前に流れをお伝えします。英語でのご案内もできます。</p>
+        <p style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #55503F; max-width: 38em; text-wrap: pretty;">At most two gatherings a month, one party each. First-time guests receive a walkthrough beforehand. Gatherings can be held in English.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; border-top: 1px solid #E5E0D3; font-size: 13px; line-height: 1.9;">
+        <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; padding: 20px 0; border-bottom: 1px solid #E5E0D3;"><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; padding-top: 4px;">日時 / WHEN</div><div>土・日　11:00 席入り（夜咄は 17:00）<br><span style="color: #8A8474;">Sat–Sun, 11:00 (evening gathering 17:00)</span></div></div>
+        <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; padding: 20px 0; border-bottom: 1px solid #E5E0D3;"><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; padding-top: 4px;">人数 / GUESTS</div><div>3〜5名（一組貸切）<br><span style="color: #8A8474;">3–5 guests, private</span></div></div>
+        <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; padding: 20px 0; border-bottom: 1px solid #E5E0D3;"><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; padding-top: 4px;">料金 / FEE</div><div>お一人 ¥ ——,———（懐石・菓子・濃茶・薄茶込）<br><span style="color: #8A8474;">Per guest, meal and all tea included</span></div></div>
+        <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; padding: 20px 0; border-bottom: 1px solid #E5E0D3;"><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; padding-top: 4px;">予約 / BOOKING</div><div>二か月前まで<br><span style="color: #8A8474;">Up to two months ahead</span></div></div>
+        <div id="reserve" style="display: flex; flex-wrap: wrap; gap: 16px; padding-top: 32px;">
+          <a href="index.html#farm" style="display: inline-flex; align-items: center; font-size: 12px; letter-spacing: 0.3em; background: #1E1C19; color: #F5F1E8; padding: 16px 28px;" style-hover="background: #3A372F;">予約する　<span style="color: #B8B2A0;">RESERVE</span></a>
+          <a href="sado.html" style="display: inline-flex; align-items: center; font-size: 12px; letter-spacing: 0.3em; border: 1px solid #1E1C19; padding: 16px 28px;" style-hover="background: #1E1C19; color: #F5F1E8;">まずは自然茶道から</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" data-screen-label="FAQ" style="padding: 0 clamp(20px, 5vw, 64px) clamp(96px, 12vw, 180px); max-width: 880px; margin: 0 auto;">
+    <div style="display: flex; flex-direction: column; gap: 48px;">
+      <div style="display: flex; flex-direction: column; gap: 22px;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #8A8474;">よくある質問 · FAQ</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0;">はじめての方へ</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; border-top: 1px solid #E5E0D3;">
+        <details style="border-bottom: 1px solid #E5E0D3;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font-size: 15px; letter-spacing: 0.06em;">茶事の経験がなくても参加できますか。<span style="font-size: 18px; color: #8A8474; font-weight: 300;">+</span></summary><div style="padding: 0 0 28px; font-size: 13px; line-height: 1.9; color: #55503F; max-width: 40em; text-wrap: pretty;">はい。事前に流れをお伝えし、席中も亭主が声をかけます。まずは自然茶道（90分）からのご参加もおすすめです。<br><span style="color: #8A8474;">Yes. We walk you through beforehand and guide you during. Starting with Natural Sado (90 min) is also a good path.</span></div></details>
+        <details style="border-bottom: 1px solid #E5E0D3;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font-size: 15px; letter-spacing: 0.06em;">懐石は菜食ですか。<span style="font-size: 18px; color: #8A8474; font-weight: 300;">+</span></summary><div style="padding: 0 0 28px; font-size: 13px; line-height: 1.9; color: #55503F; max-width: 40em; text-wrap: pretty;">はい。畑と山で採れたもの、自社の味噌と米だけで組みます。魚・肉は使いません。<br><span style="color: #8A8474;">Yes. Field, mountain, our own miso and rice. No fish or meat.</span></div></details>
+        <details style="border-bottom: 1px solid #E5E0D3;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font-size: 15px; letter-spacing: 0.06em;">服装は。<span style="font-size: 18px; color: #8A8474; font-weight: 300;">+</span></summary><div style="padding: 0 0 28px; font-size: 13px; line-height: 1.9; color: #55503F; max-width: 40em; text-wrap: pretty;">着物でも洋服でも。白い靴下をお持ちください。腕時計と指輪は席入り前に外していただきます。<br><span style="color: #8A8474;">Kimono or ordinary clothes. Bring white socks; watches and rings come off before entering.</span></div></details>
+        <details style="border-bottom: 1px solid #E5E0D3;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font-size: 15px; letter-spacing: 0.06em;">正座が難しいのですが。<span style="font-size: 18px; color: #8A8474; font-weight: 300;">+</span></summary><div style="padding: 0 0 28px; font-size: 13px; line-height: 1.9; color: #55503F; max-width: 40em; text-wrap: pretty;">椅子席でも行えます。予約時にお知らせください。<br><span style="color: #8A8474;">We can hold it with chairs. Let us know when booking.</span></div></details>
+        <details style="border-bottom: 1px solid #E5E0D3;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font-size: 15px; letter-spacing: 0.06em;">自然茶道との違いは何ですか。<span style="font-size: 18px; color: #8A8474; font-weight: 300;">+</span></summary><div style="padding: 0 0 28px; font-size: 13px; line-height: 1.9; color: #55503F; max-width: 40em; text-wrap: pretty;">自然茶道は約90分、一碗の茶と菓子。自然茶事は懐石を含む約4時間の正式な会で、濃茶と薄茶の両方を差し上げます。<br><span style="color: #8A8474;">Natural Sado is 90 minutes, one bowl and a sweet. Natural Chaji is a four-hour formal gathering with a meal, thick tea and thin tea.</span></div></details>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="background: #1E1C19; color: #F5F1E8; padding: clamp(64px, 8vw, 120px) clamp(20px, 5vw, 64px) 40px;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 48px;">
+      <div style="display: flex; align-items: center; gap: 18px;">
+        <svg width="44" height="44" viewBox="0 0 96 96"><circle cx="48" cy="48" r="10" fill="none" stroke="#F5F1E8" stroke-width="2"></circle><circle cx="48" cy="48" r="38" fill="none" stroke="#F5F1E8" stroke-width="2"></circle><circle cx="75" cy="21" r="7" fill="#F5F1E8"></circle><circle cx="75" cy="21" r="13" fill="none" stroke="#F5F1E8" stroke-width="1.6"></circle><circle cx="86" cy="14" r="3.5" fill="#1E1C19" stroke="#F5F1E8" stroke-width="1.6"></circle></svg>
+        <div style="font-family: 'Optima DS', 'Manrope', 'Zen Kaku Gothic New', sans-serif;">
+          <div style="font-size: 13px; letter-spacing: 0.32em;">NATURAL MATCHA STANDARD</div>
+          <div style="font-size: 9px; letter-spacing: 0.5em; margin-top: 6px; color: #B8B2A0;">BY YUSANDO</div>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: clamp(32px, 5vw, 80px); font-size: 12px; letter-spacing: 0.24em; line-height: 2.6;">
+        <div style="display: flex; flex-direction: column;"><a href="matcha.html#shop" style="color: #F5F1E8;">ONLINE SHOP</a><a href="matcha.html" style="color: #F5F1E8;">自然抹茶</a><a href="sado.html" style="color: #F5F1E8;">自然茶道</a><a href="#top" style="color: #F5F1E8;">自然茶事</a></div>
+        <div style="display: flex; flex-direction: column;"><a href="index.html#farm" style="color: #F5F1E8;">YUSANDO</a><a href="index.html#farm" style="color: #F5F1E8;">TEA TOUR</a><a href="index.html#farm" style="color: #F5F1E8;">CONTACT</a></div>
+      </div>
+    </div>
+    <div style="max-width: 1200px; margin: 64px auto 0; padding-top: 24px; border-top: 1px solid #3A372F; font-size: 11px; letter-spacing: 0.2em; color: #8A8474; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;"><span>© 株式会社悠三堂 · YUSANDO Co., Ltd. — Nara, Japan</span><span>日本語 / ENGLISH</span></div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>

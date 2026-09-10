@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Zen+Old+Mincho:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@font-face { font-family: "Optima DS"; src: url("assets/Optima-Medium.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Optima DS"; src: url("assets/Optima-Bold.ttf") format("truetype"); font-weight: 700; }
+body { margin: 0; background: #F5F1E8; color: #1E1C19; }
+a { color: #1E1C19; text-decoration: none; } a:hover { color: #6B6557; }
+</style>
+</helmet>
+<div style="font-family: 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-weight: 300; color: #1E1C19; background: #F5F1E8; -webkit-font-smoothing: antialiased;">
+
+  <header style="position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; padding: 22px clamp(20px, 5vw, 64px); background: rgba(245,241,232,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid #E5E0D3;">
+    <a href="#top" style="display: flex; align-items: center; gap: 14px;">
+      <svg width="30" height="30" viewBox="0 0 96 96"><circle cx="48" cy="48" r="10" fill="none" stroke="#1E1C19" stroke-width="2.5"></circle><circle cx="48" cy="48" r="38" fill="none" stroke="#1E1C19" stroke-width="2.5"></circle><circle cx="75" cy="21" r="7" fill="#1E1C19"></circle><circle cx="75" cy="21" r="13" fill="none" stroke="#1E1C19" stroke-width="2"></circle><circle cx="86" cy="14" r="3.5" fill="#F5F1E8" stroke="#1E1C19" stroke-width="2"></circle></svg>
+      <span style="font-family: 'Optima DS', 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-size: 13px; letter-spacing: 0.32em;">NATURAL MATCHA STANDARD</span>
+    </a>
+    <nav style="display: flex; gap: clamp(18px, 3vw, 40px); font-size: 12px; letter-spacing: 0.24em;">
+      <a href="#standard">STANDARD</a>
+      <a href="#matcha">自然抹茶</a>
+      <a href="#sado">自然茶道</a>
+      <a href="#chaji">自然茶事</a>
+      <a href="#farm">YUSANDO</a>
+      <a href="#shop" style="border-bottom: 1px solid #1E1C19; padding-bottom: 2px;">SHOP</a>
+    </nav>
+  </header>
+
+  <section id="top" data-screen-label="Hero" style="min-height: 92vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 80px 24px 96px; gap: 44px;">
+    <svg width="clamp(160px, 22vw, 240px)" height="clamp(160px, 22vw, 240px)" viewBox="0 0 96 96" style="width: clamp(160px, 22vw, 240px); height: auto;"><circle cx="48" cy="48" r="10" fill="none" stroke="#1E1C19" stroke-width="1.1"></circle><circle cx="48" cy="48" r="38" fill="none" stroke="#1E1C19" stroke-width="1.1"></circle><circle cx="75" cy="21" r="7" fill="#1E1C19"></circle><circle cx="75" cy="21" r="13" fill="none" stroke="#1E1C19" stroke-width="0.9"></circle><circle cx="86" cy="14" r="3" fill="#F5F1E8" stroke="#1E1C19" stroke-width="0.9"></circle></svg>
+    <div style="font-family: 'Optima DS', 'Manrope', 'Zen Kaku Gothic New', sans-serif;">
+      <div style="font-size: clamp(22px, 3vw, 34px); letter-spacing: 0.4em; margin-left: 0.4em;">NATURAL MATCHA</div>
+      <div style="font-size: clamp(22px, 3vw, 34px); letter-spacing: 0.4em; margin-left: 0.4em; margin-top: 10px;">STANDARD</div>
+      <div style="font-size: 11px; letter-spacing: 0.5em; margin-left: 0.5em; margin-top: 26px; color: #55503F;">BY YUSANDO</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 18px; align-items: center;">
+      <p style="font-family: 'Zen Old Mincho', serif; font-size: clamp(15px, 1.4vw, 18px); line-height: 2.3; letter-spacing: 0.12em; max-width: 30em; margin: 0; text-wrap: pretty;">太陽と、月と、この土地のめぐりのままに。<br>肥料も農薬も使わない、自然栽培の抹茶。</p>
+      <p style="margin: 0; font-family: 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-weight: 300; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #55503F; max-width: 36em; text-wrap: pretty;">Grown with the sun, the moon, and the turning of this land.<br>Naturally cultivated matcha, without fertilizer or pesticides.</p>
+    </div>
+    <a href="#matcha" style="font-size: 12px; letter-spacing: 0.3em; border-bottom: 1px solid #1E1C19; padding-bottom: 4px; margin-top: 8px;">抹茶を見る　<span style="color: #55503F;">VIEW MATCHA</span></a>
+  </section>
+
+  <section id="standard" data-screen-label="Standard" style="position: relative; padding: clamp(120px, 14vw, 220px) clamp(20px, 5vw, 64px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 64px; background: url('assets/field.jpg') center 60% / cover no-repeat; color: #F5F1E8;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30,28,25,0.66) 0%, rgba(30,28,25,0.8) 50%, rgba(30,28,25,0.66) 100%);"></div>
+    <div style="position: relative; font-size: 11px; letter-spacing: 0.4em; color: #D8D2C4;">THE STANDARD</div>
+    <div style="position: relative; display: flex; align-items: center; gap: clamp(32px, 6vw, 80px);">
+      <svg width="56" height="56" viewBox="0 0 96 96"><circle cx="48" cy="48" r="38" fill="none" stroke="#F5F1E8" stroke-width="1.4"></circle><circle cx="48" cy="48" r="10" fill="none" stroke="#F5F1E8" stroke-width="1.4"></circle></svg>
+      <svg width="56" height="56" viewBox="0 0 96 96"><circle cx="48" cy="48" r="20" fill="#F5F1E8"></circle><circle cx="48" cy="48" r="34" fill="none" stroke="#F5F1E8" stroke-width="1.4"></circle></svg>
+      <svg width="56" height="56" viewBox="0 0 96 96"><circle cx="48" cy="48" r="34" fill="none" stroke="#F5F1E8" stroke-width="1.4"></circle><circle cx="72" cy="30" r="7" fill="#1E1C19" stroke="#F5F1E8" stroke-width="1.4"></circle></svg>
+    </div>
+    <div style="position: relative; font-family: 'Zen Old Mincho', serif; font-size: clamp(16px, 1.5vw, 20px); line-height: 2.6; letter-spacing: 0.12em; max-width: 36em; text-wrap: pretty;">
+      <p style="margin: 0 0 2.6em;">火と水と土。<br>太陽と、月と、地球。<br>自然界のすべては、この三つのはたらきによって生まれ、育つ。</p>
+      <p style="margin: 0 0 2.6em;">私たちは、そこに何も足さない。<br>農薬も、肥料も使わず、土が本来もっている力を信じて待つ。<br>太陽が育て、月が満たし、地球が実らせたものを、<wbr>そのまま一碗に。</p>
+      <p style="margin: 0;">それが、私たちの抹茶の「標準」です。</p>
+    </div>
+    <div style="position: relative; font-family: 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-weight: 300; font-size: 14px; line-height: 2; letter-spacing: 0.04em; max-width: 34em; color: #D8D2C4; text-wrap: pretty; margin-top: -24px;">
+      <p style="margin: 0 0 1.8em;">Fire, water, and earth.<br>The sun, the moon, and the planet we stand on.<br>Everything in nature is born and raised by these three forces.</p>
+      <p style="margin: 0 0 1.8em;">We add nothing to them.<br>No pesticides, no fertilizer. We trust the soil’s own strength, and we wait.<br>What the sun raises, the moon fills, and the earth brings to ripeness, we bring to the bowl as it is.</p>
+      <p style="margin: 0;">This is our standard for matcha.</p>
+    </div>
+  </section>
+
+  <section id="three" data-screen-label="Three pillars" style="padding: clamp(80px, 10vw, 160px) clamp(20px, 5vw, 64px); max-width: 1200px; margin: 0 auto; text-align: center;">
+    <div style="font-size: 11px; letter-spacing: 0.4em; color: #8A8474; margin-bottom: 20px;">THREE PRACTICES</div>
+    <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(22px, 2.6vw, 32px); line-height: 1.7; letter-spacing: 0.1em; margin: 0 0 12px;">一碗から、所作へ、暮らしへ。</h2>
+    <p style="margin: 0 0 72px; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #55503F;">From one bowl, to the way we move, to the way we live.</p>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px 24px;">
+      <a href="#matcha" style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <svg width="56" height="56" viewBox="0 0 96 96"><circle cx="48" cy="48" r="38" fill="none" stroke="#1E1C19" stroke-width="1.4"></circle><circle cx="48" cy="48" r="10" fill="none" stroke="#1E1C19" stroke-width="1.4"></circle></svg>
+        <div style="font-family: 'Zen Old Mincho', serif; font-size: 22px; letter-spacing: 0.2em; margin-left: 0.2em;">自然抹茶</div>
+        <div style="font-size: 11px; letter-spacing: 0.3em; color: #55503F; margin-top: -10px;">NATURAL MATCHA</div>
+        <p style="margin: 0; font-size: 14px; line-height: 2; color: #55503F; max-width: 20em; text-wrap: pretty;">無肥料・無農薬で育てた、そのままの抹茶。</p>
+        <p style="margin: -8px 0 0; font-size: 12.5px; line-height: 1.8; color: #55503F; max-width: 24em; text-wrap: pretty;">Matcha grown without fertilizer or pesticides, as it is.</p>
+      </a>
+      <a href="#sado" style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <svg width="56" height="56" viewBox="0 0 96 96"><circle cx="48" cy="48" r="34" fill="none" stroke="#1E1C19" stroke-width="1.4"></circle><circle cx="72" cy="30" r="7" fill="#F5F1E8" stroke="#1E1C19" stroke-width="1.4"></circle></svg>
+        <div style="font-family: 'Zen Old Mincho', serif; font-size: 22px; letter-spacing: 0.2em; margin-left: 0.2em;">自然茶道</div>
+        <div style="font-size: 11px; letter-spacing: 0.3em; color: #55503F; margin-top: -10px;">NATURAL TEA WAY</div>
+        <p style="margin: 0; font-size: 14px; line-height: 2; color: #55503F; max-width: 20em; text-wrap: pretty;">自然観にもとづいた、新しい茶道。</p>
+        <p style="margin: -8px 0 0; font-size: 12.5px; line-height: 1.8; color: #55503F; max-width: 24em; text-wrap: pretty;">A new way of tea, grounded in a view of nature.</p>
+      </a>
+      <a href="#chaji" style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <svg width="56" height="56" viewBox="0 0 96 96"><circle cx="48" cy="48" r="20" fill="#1E1C19"></circle><circle cx="48" cy="48" r="34" fill="none" stroke="#1E1C19" stroke-width="1.4"></circle></svg>
+        <div style="font-family: 'Zen Old Mincho', serif; font-size: 22px; letter-spacing: 0.2em; margin-left: 0.2em;">自然茶事</div>
+        <div style="font-size: 11px; letter-spacing: 0.3em; color: #55503F; margin-top: -10px;">NATURAL TEA GATHERING</div>
+        <p style="margin: 0; font-size: 14px; line-height: 2; color: #55503F; max-width: 20em; text-wrap: pretty;">食事と生活まで、ひとつづきの茶事。</p>
+        <p style="margin: -8px 0 0; font-size: 12.5px; line-height: 1.8; color: #55503F; max-width: 24em; text-wrap: pretty;">Tea that continues into meals and everyday life.</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="matcha" data-screen-label="Matcha" style="background: #1E1C19; color: #F5F1E8;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); max-width: 1400px; margin: 0 auto;">
+      <div style="aspect-ratio: 4 / 3; background: url('assets/matcha.jpg') center / cover no-repeat;"></div>
+      <div style="padding: clamp(56px, 7vw, 120px) clamp(28px, 5vw, 80px); display: flex; flex-direction: column; justify-content: center; gap: 28px;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #B8B2A0;">01 ─ 自然抹茶 · NATURAL MATCHA</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0; text-wrap: pretty;">自然栽培 抹茶 <span style="font-family: 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-weight: 300; font-size: 14px; letter-spacing: 0.2em; margin-left: 12px; color: #B8B2A0;">NATURALLY GROWN MATCHA</span></h2>
+        <p style="margin: 0; font-size: 14px; line-height: 2.1; color: #D8D2C4; max-width: 34em; text-wrap: pretty;">奈良の畑で無肥料・無農薬で育てた碾茶を、石臼でゆっくり挽きました。色は淡く、香りは静か。渋みの奥に、葉そのものの甘さが残ります。</p>
+        <p style="margin: 0; font-family: 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-weight: 300; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #B8B2A0; max-width: 40em; text-wrap: pretty;">Tencha grown in Nara without fertilizer or pesticides, slowly ground on a stone mill. Pale in color, quiet in aroma, with the leaf’s own sweetness behind the astringency.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 13px; letter-spacing: 0.1em; color: #D8D2C4; margin-top: 8px;">
+          <div><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; margin-bottom: 6px;">内容量 / NET</div>20g / 缶 · tin</div>
+          <div><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; margin-bottom: 6px;">産地 / ORIGIN</div>奈良県 · Nara, Japan</div>
+          <div><div style="font-size: 10px; letter-spacing: 0.3em; color: #8A8474; margin-bottom: 6px;">栽培 / CULTIVATION</div>無肥料・無農薬 · No fertilizer, no pesticides</div>
+        </div>
+        <a href="#shop" style="display: inline-flex; align-items: center; gap: 14px; margin-top: 12px; color: #F5F1E8; font-size: 12px; letter-spacing: 0.3em; border: 1px solid #F5F1E8; padding: 16px 28px; align-self: flex-start;" style-hover="background: #F5F1E8; color: #1E1C19;">ONLINE SHOP</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sado" data-screen-label="Sado" style="padding: clamp(80px, 10vw, 160px) clamp(20px, 5vw, 64px); max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(40px, 6vw, 96px); align-items: center;">
+      <div style="aspect-ratio: 4 / 5; background: url('assets/bowls.jpg') center / cover no-repeat;"></div>
+      <div style="display: flex; flex-direction: column; gap: 28px;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #8A8474;">02 ─ 自然茶道 · NATURAL TEA WAY</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0; text-wrap: pretty;">自然観にもとづいた、<br>新しい茶道。<br><span style="font-family: 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-weight: 300; font-size: 15px; letter-spacing: 0.14em; color: #55503F;">A NEW WAY OF TEA, GROUNDED IN NATURE</span></h2>
+        <p style="margin: 0; font-size: 14px; line-height: 2.1; color: #55503F; max-width: 32em; text-wrap: pretty;">流派も、道具の格も問わない。太陽と月と地球のめぐりを感じながら、一碗を点てて飲む。その所作そのものを茶道と呼びます。</p>
+        <p style="margin: 0; font-family: 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-weight: 300; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #55503F; max-width: 38em; text-wrap: pretty;">No school, no hierarchy of utensils. Whisk and drink a single bowl while feeling the turning of the sun, the moon, and the earth. We call that act itself the way of tea.</p>
+        <a href="#sado" style="font-size: 12px; letter-spacing: 0.3em; border-bottom: 1px solid #1E1C19; padding-bottom: 4px; align-self: flex-start;">自然茶道について　<span style="color: #55503F;">LEARN MORE</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="chaji" data-screen-label="Chaji" style="background: #1E1C19; color: #F5F1E8;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); max-width: 1400px; margin: 0 auto;">
+      <div style="padding: clamp(56px, 7vw, 120px) clamp(28px, 5vw, 80px); display: flex; flex-direction: column; justify-content: center; gap: 28px;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #B8B2A0;">03 ─ 自然茶事 · NATURAL TEA GATHERING</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0; text-wrap: pretty;">食事と、生活も。<br><span style="font-family: 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-weight: 300; font-size: 15px; letter-spacing: 0.14em; color: #B8B2A0;">MEALS, AND EVERYDAY LIFE</span></h2>
+        <p style="margin: 0; font-size: 14px; line-height: 2.1; color: #D8D2C4; max-width: 34em; text-wrap: pretty;">茶事は一碗で終わらない。自然栽培の食材でととのえた食事、季節に沿った暮らし。茶を中心に、生活のすべてを自然の側に寄せていく。</p>
+        <p style="margin: 0; font-family: 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-weight: 300; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #B8B2A0; max-width: 40em; text-wrap: pretty;">A tea gathering does not end with one bowl. Meals prepared from naturally grown ingredients, a life that follows the seasons. With tea at the center, everything in daily life moves closer to nature.</p>
+        <a href="#chaji" style="display: inline-flex; align-items: center; gap: 14px; margin-top: 12px; color: #F5F1E8; font-size: 12px; letter-spacing: 0.3em; border: 1px solid #F5F1E8; padding: 16px 28px; align-self: flex-start;" style-hover="background: #F5F1E8; color: #1E1C19;">茶事に参加する　JOIN</a>
+      </div>
+      <div style="aspect-ratio: 4 / 3; background: url('assets/drying-sunset.jpg') center / cover no-repeat;"></div>
+    </div>
+  </section>
+
+  <section id="farm" data-screen-label="Farm" style="padding: clamp(80px, 10vw, 160px) clamp(20px, 5vw, 64px); max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(40px, 6vw, 96px); align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 28px;">
+        <div style="font-size: 11px; letter-spacing: 0.4em; color: #8A8474;">YUSANDO</div>
+        <h2 style="font-family: 'Zen Old Mincho', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.7; letter-spacing: 0.08em; margin: 0; text-wrap: pretty;">悠三堂の畑から。<br><span style="font-family: 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-weight: 300; font-size: 15px; letter-spacing: 0.14em; color: #55503F;">FROM THE FIELDS OF YUSANDO</span></h2>
+        <p style="margin: 0; font-size: 14px; line-height: 2.1; color: #55503F; max-width: 32em; text-wrap: pretty;">Natural Matcha Standard は、奈良で自然栽培の茶をつくる悠三堂の抹茶ブランドです。畑に立ち、季節のめぐりを待つ。その時間の長さが、そのまま一服の静けさになります。</p>
+        <p style="margin: 0; font-family: 'Manrope', 'Zen Kaku Gothic New', sans-serif; font-weight: 300; font-size: 13px; line-height: 1.9; letter-spacing: 0.04em; color: #55503F; max-width: 38em; text-wrap: pretty;">Natural Matcha Standard is the matcha brand of Yusando, a naturally cultivated tea farm in Nara. We stand in the field and wait for the seasons to turn. That length of time becomes the stillness of a single bowl.</p>
+        <a href="#farm" style="font-size: 12px; letter-spacing: 0.3em; border-bottom: 1px solid #1E1C19; padding-bottom: 4px; align-self: flex-start;">悠三堂について　<span style="color: #55503F;">ABOUT YUSANDO</span></a>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div style="aspect-ratio: 3 / 4; background: url('assets/grower.jpg') center / cover no-repeat;"></div>
+        <div style="aspect-ratio: 3 / 4; background: url('assets/leaf-macro.jpg') center / cover no-repeat; margin-top: 48px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="shop" data-screen-label="Footer" style="background: #1E1C19; color: #F5F1E8; padding: clamp(64px, 8vw, 120px) clamp(20px, 5vw, 64px) 40px;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 48px;">
+      <div style="display: flex; align-items: center; gap: 18px;">
+        <svg width="44" height="44" viewBox="0 0 96 96"><circle cx="48" cy="48" r="10" fill="none" stroke="#F5F1E8" stroke-width="2"></circle><circle cx="48" cy="48" r="38" fill="none" stroke="#F5F1E8" stroke-width="2"></circle><circle cx="75" cy="21" r="7" fill="#F5F1E8"></circle><circle cx="75" cy="21" r="13" fill="none" stroke="#F5F1E8" stroke-width="1.6"></circle><circle cx="86" cy="14" r="3.5" fill="#1E1C19" stroke="#F5F1E8" stroke-width="1.6"></circle></svg>
+        <div style="font-family: 'Optima DS', 'Manrope', 'Zen Kaku Gothic New', sans-serif;">
+          <div style="font-size: 13px; letter-spacing: 0.32em;">NATURAL MATCHA STANDARD</div>
+          <div style="font-size: 9px; letter-spacing: 0.5em; margin-top: 6px; color: #B8B2A0;">BY YUSANDO</div>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: clamp(32px, 5vw, 80px); font-size: 12px; letter-spacing: 0.24em; line-height: 2.6;">
+        <div style="display: flex; flex-direction: column;"><a href="#shop" style="color: #F5F1E8;">ONLINE SHOP</a><a href="#matcha" style="color: #F5F1E8;">自然抹茶</a><a href="#sado" style="color: #F5F1E8;">自然茶道</a><a href="#chaji" style="color: #F5F1E8;">自然茶事</a></div>
+        <div style="display: flex; flex-direction: column;"><a href="#farm" style="color: #F5F1E8;">YUSANDO</a><a href="#farm" style="color: #F5F1E8;">TEA TOUR</a><a href="#farm" style="color: #F5F1E8;">CONTACT</a></div>
+      </div>
+    </div>
+    <div style="max-width: 1200px; margin: 64px auto 0; padding-top: 24px; border-top: 1px solid #3A372F; font-size: 11px; letter-spacing: 0.2em; color: #8A8474; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;"><span>© 株式会社悠三堂 · YUSANDO Co., Ltd. — Nara, Japan</span><span>日本語 / ENGLISH</span></div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>
